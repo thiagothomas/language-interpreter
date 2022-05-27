@@ -1,0 +1,76 @@
+<sum> ::= <expressao> + <expressao>;
+<sub> ::= <expressao> - <expressao>;
+<mult> ::= <expressao> * <expressao>;
+<div> ::= <expressao> / <expressao>;
+<var> ::= var <identificador>;
+<funcao> ::= funcao <identificador>(<expressao>, <expressao);
+
+<nums> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+
+<integer> ::= <nums> | <nums><integer>
+
+<letras> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" |
+"S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"| "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" |
+"m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | <letras><letras>
+
+<expressao> ::=  <sum>
+	| <sub>
+	| <mult>
+	| <frac>
+	| ( <expressao> )
+	| <var>
+	| <funcao>;
+
+<identificador> ::= <letras>
+
+
+<bool> ::= verdadeiro | falso;
+
+<se> ::= se ( <exp_logica> ) <expressao>
+	| se ( <exp_logica> ) <expressao> senao <expressao>
+
+<declaracao> ::= <var> = <expressao>
+
+<exp_logica> ::= <objeto>
+	       | <expressao>
+	       | <igual>
+	       | <diferente>
+	       | <ou>
+	       | <ee>
+
+<objeto> ::= NUMBER | STRING | "verdadeiro" | "falso" | "nulo";
+<operadores> ::= "==" | "!=" | "<" | "<=" | ">" | ">="
+               | "+"  | "-"  | "*" | "/" | "ou"| "ee" | "!";
+
+<enquanto> ::= enquanto ( <exp_logica> ) <expressao>;
+
+<para> ::= para ( <expressao> ; <exp_logica>; <expressao> ) <expressao>;
+
+<igual> ::=   <expressao> == <expressao> | <expressao> == <igual>;
+
+<diferente> ::= <expressao> != <expressao> | <expressao> != <diferente> ;
+
+<maior> ::= <expressao> > <expressao> | <expressao> > <maior> ;
+
+<maior_igual> ::= <expressao> >= <expressao> | <expressao> >= <maior_igual>;
+
+<menor> ::= <expressao> < <expressao> | <expressao> < <menor> ;
+
+<menor_igual> ::= <expressao> <= <expressao> | <expressao> <= <menor_igual>;
+
+<ou> ::= <expressao> ou <expressao> | <expressao> ou <ou>;
+
+<ee> ::= <expressao> ee <expressao> | <expressao> ee <ee>;
+
+<retornar> ::= retornar <expressao>;
+
+<imprimir> ::= imprimir <expressao>;
+
+<media> ::= media(<expressao>,  <expressao>)
+
+<max> ::= max(<expressao>, <expressao>)
+
+<min> ::= min(<expressao>, <expressao>)
+
+<fatorial> ::= fatorial(<expressao>, <expressao>)
+

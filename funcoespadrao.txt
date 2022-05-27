@@ -1,0 +1,30 @@
+funcao media(a, b) {
+    retornar (a+b)/2;
+}
+
+funcao max(a, b) {
+    se(a > b) {
+        retornar a;
+    }
+    senao {
+        retornar b;
+    }
+}
+
+funcao min(a, b) {
+    se(a < b) {
+        retornar a;
+    }
+    senao {
+        retornar b;
+    }
+}
+
+funcao fatorial(a) {
+    se (a == 0 ou a == 1) {
+        retornar 1;
+    }
+    senao {
+        retornar (a * fatorial(a-1));
+    }
+}
